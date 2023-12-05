@@ -19,9 +19,7 @@ docker build . -t sd2snes-fpga
 echo Creating docker container from the built image to extract im3 files
 container_id=$(docker create sd2snes-fpga)
 echo Extracting im3 files
-docker cp ${container_id}:/work/sd2snes/src/obj-mk3/firmware.stm .
-docker cp ${container_id}:/work/sd2snes/verilog/sd2snes_base/fpga_base.bi3 .
-docker cp ${container_id}:/work/sd2snes/verilog/sd2snes_mini/fpga_mini.bi3 .
+docker cp ${container_id}:/work/sd2snes/ ./build
 echo Removing temporary container
 docker rm ${container_id}
 
