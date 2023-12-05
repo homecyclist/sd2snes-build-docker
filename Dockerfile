@@ -48,7 +48,6 @@ RUN cd ./verilog/sd2snes_mini && make mk3
 
 # PATCH to add a missing #include which otherwise breaks compilation
 RUN sed -i '27 i #include <ctype.h>' ./src/sgb.c
-RUN cd ./src && make CONFIG=config-mk2
 RUN cd ./src && make CONFIG=config-mk3
 RUN cd ./src && make CONFIG=config-mk3-stm32
 # output is /work/sd2snes/src/firmware.*
