@@ -6,7 +6,7 @@ set -e
 # clone sd2snes repo into sd2snes/ if that directory does not already exist:
 if [ ! -d "sd2snes" ]; then
   echo Cloning sd2snes repository into sd2snes/
-  git clone https://github.com/mrehkopf/sd2snes.git
+  git clone https://github.com/homecyclist/sd2snes.git
 else
   echo Existing working copy of sd2snes/ found.
 fi
