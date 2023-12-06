@@ -20,8 +20,8 @@ echo Creating docker container from the built image to extract im3 files
 container_id=$(docker create sd2snes-fpga)
 echo Extracting firmware files
 docker cp ${container_id}:/work/sd2snes/verilog/sd2snes_base/fpga_base.bi3 .
-docker cp ${container_id}:/work/sd2snes/src/obj-mk3-stm32/firmware.im3 .
-docker cp ${container_id}:/work/sd2snes/src/obj-mk3-stm32/firmware.stm .
+#docker cp ${container_id}:/work/sd2snes/src/obj-mk3-stm32/firmware.im3 .
+docker cp ${container_id}:/work/sd2snes/src/obj-mk3-stm32/firmware.stm . # FXPAK Pro Rev. D
 echo Removing temporary container
 docker rm ${container_id}
 
